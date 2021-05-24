@@ -32,6 +32,7 @@ import { LivroReadComponent } from './components/view/livro/livro-read/livro-rea
 import { LivroUpdateComponent } from './components/view/livro/livro-update/livro-update.component';
 import { LivroCreateComponent } from './components/view/livro/livro-create/livro-create.component';
 import { CategoriaCreateComponent } from './components/view/categoria/categoria-create/categoria-create.component';
+import { CategoriaDeleteComponent } from './components/view/categoria/categoria-delete/categoria-delete.component';
 
 
 
@@ -48,7 +49,8 @@ import { CategoriaCreateComponent } from './components/view/categoria/categoria-
     LivroReadComponent,
     LivroUpdateComponent,
     LivroCreateComponent,
-    CategoriaCreateComponent
+    CategoriaCreateComponent,
+    CategoriaDeleteComponent
   ],
   imports: [
     BrowserModule,

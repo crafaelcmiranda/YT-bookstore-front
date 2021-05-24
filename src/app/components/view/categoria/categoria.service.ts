@@ -20,8 +20,16 @@ export class CategoriaService {
     return this.http.get<Categoria[]>(this.url)
   }
 
+  findById(id: String): Observable<Categoria> {
+    return this.http.get<Categoria>(`${this.url}/${id}`)
+  }
+
   create(categoria: Categoria): Observable<Categoria> {
     return this.http.post<Categoria>(this.url, categoria)
+  }
+
+  delete(id: String): Observable<void> {
+    return this.http.delete<void>(`${this.url}/${id}`)
   }
 
   message(msg: String): void {
