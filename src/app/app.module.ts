@@ -18,6 +18,11 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -27,6 +32,8 @@ import { LivroReadComponent } from './components/view/livro/livro-read/livro-rea
 import { LivroUpdateComponent } from './components/view/livro/livro-update/livro-update.component';
 import { LivroCreateComponent } from './components/view/livro/livro-create/livro-create.component';
 import { CategoriaCreateComponent } from './components/view/categoria/categoria-create/categoria-create.component';
+
+
 
 @NgModule({
   declarations: [
@@ -55,7 +62,14 @@ import { CategoriaCreateComponent } from './components/view/categoria/categoria-
     MatListModule,
     MatIconModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatButtonModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSnackBarModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,24 @@
-<p>categoria-create works!</p>
+<form>
+    <div class="content">
+        <div class="title">
+            <h1>Categorias</h1>
+        </div>
+
+        <button class="mat-elevation-z4" mat-stroked-button (click)="create()">Salvar</button>
+        <button class="mat-elevation-z4" mat-raised-button color="warn" routerLink="../">Cancelar</button>
+
+
+        <mat-form-field class="field-input">
+            <mat-label>Nome</mat-label>
+            <input [(ngModel)]="categoria.nome" type="text" matInput name="nome"
+                placeholder="Digite o nome da Categoria">
+        </mat-form-field>
+        <mat-form-field class="field-input">
+            <mat-label>Descrição</mat-label>
+            <textarea [(ngModel)]="categoria.descricao" type="text" matInput name="descricao"
+                placeholder="Digite a descrição da Categoria"></textarea>
+        </mat-form-field>
+    </div>
+
+
+</form>

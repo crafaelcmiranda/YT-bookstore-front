@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Categoria } from '../Categoria.model';
 import { CategoriaService } from '../categoria.service';
 
@@ -9,19 +10,27 @@ import { CategoriaService } from '../categoria.service';
 })
 export class CategoriaReadComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'nome', 'descricao', 'acoes'];
+  displayedColumns: string[] = ['id', 'nome', 'descricao', 'livro', 'acoes'];
 
   categorias: Categoria[] = []
 
-  constructor(private service: CategoriaService) { }
-  findAll() {
+  constructor(
+    private service: CategoriaService,
+    private router: Router
+  ) { }
+
+
+  ngOnInit(): void {
+    this.findAll();
+  }
+
+  findAll(): void {
     this.service.findAll().subscribe(resposta => {
       this.categorias = resposta
     })
   }
-
-  ngOnInit(): void {
-    this.findAll();
+  create(): void {
+    this.router.navigate(["categorias/create"])
   }
 
 }
